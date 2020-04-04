@@ -27,6 +27,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		83935A972438E6E800F32D64 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		83F501252438B71E006C3CB8 /* tuxera_NTFS.fs */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tuxera_NTFS.fs; sourceTree = BUILT_PRODUCTS_DIR; };
 		83F501282438B71E006C3CB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83F5012F2438B754006C3CB8 /* mkntfs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = mkntfs; sourceTree = "<group>"; };
@@ -52,6 +53,7 @@
 				83F5012E2438B72A006C3CB8 /* Resources */,
 				83F501272438B71E006C3CB8 /* fsbundle */,
 				83F501262438B71E006C3CB8 /* Products */,
+				83935A972438E6E800F32D64 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
