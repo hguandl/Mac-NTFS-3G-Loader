@@ -1,0 +1,19 @@
+#!/bin/bash
+
+while getopts "?v:" opt; do
+    case "$opt" in
+    \?)
+        exit 1
+        ;;
+    v)
+        label=$OPTARG
+        shift
+        shift
+        ;;
+    esac
+done
+
+device=$(sed 's|/dev/rdisk|/dev/disk|g' <<< $@)
+
+/usr/local/opt/ntfs-3g/sbin/mkntfs --force --fast --label $label $device
+exit $?

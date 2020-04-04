@@ -1,0 +1,28 @@
+#!/bin/bash
+
+probe() {
+    /usr/local/opt/ntfs-3g/bin/ntfs-3g.probe --readwrite /dev/$1
+
+    if [ $? -eq 0 ]; then
+        /usr/local/opt/ntfs-3g/sbin/ntfslabel /dev/$1 | tr -d '\n'
+        exit 255
+    fi
+    exit 0
+}
+
+while getopts ":pq" opt; do
+    case "$opt" in
+    p)
+        shift
+        probe $@
+        ;;
+    q)
+        shift
+        /usr/local/opt/ntfs-3g/bin/ntfsfix --no-action $@
+        ;;
+    
+    *)
+        exit 250
+        ;;
+    esac
+done

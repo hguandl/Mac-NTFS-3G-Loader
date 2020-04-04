@@ -3,24 +3,83 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>$(DEVELOPMENT_LANGUAGE)</string>
-	<key>CFBundleExecutable</key>
-	<string>$(EXECUTABLE_NAME)</string>
+	<string>English</string>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>$(PRODUCT_NAME)</string>
+	<string>tuxera_NTFS</string>
 	<key>CFBundlePackageType</key>
-	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
+	<string>fs</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>FSMediaTypes</key>
+	<dict>
+		<key>EBD0A0A2-B9E5-4433-87C0-68B6B72699C7</key>
+		<dict>
+			<key>FSMediaProperties</key>
+			<dict>
+				<key>Content Hint</key>
+				<string>EBD0A0A2-B9E5-4433-87C0-68B6B72699C7</string>
+				<key>Leaf</key>
+				<true/>
+			</dict>
+			<key>FSProbeArguments</key>
+			<string>-p</string>
+			<key>FSProbeExecutable</key>
+			<string>ntfs-3g.util</string>
+			<key>FSProbeOrder</key>
+			<integer>1</integer>
+		</dict>
+		<key>Windows_NTFS</key>
+		<dict>
+			<key>FSMediaProperties</key>
+			<dict>
+				<key>Content Hint</key>
+				<string>Windows_NTFS</string>
+				<key>Leaf</key>
+				<true/>
+			</dict>
+			<key>FSProbeArguments</key>
+			<string>-p</string>
+			<key>FSProbeExecutable</key>
+			<string>ntfs-3g.util</string>
+			<key>FSProbeOrder</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>FSPersonalities</key>
+	<dict>
+		<key>TUXERA_NTFS</key>
+		<dict>
+			<key>FSFormatArguments</key>
+			<string></string>
+			<key>FSFormatContentMask</key>
+			<string>Windows_NTFS</string>
+			<key>FSFormatExecutable</key>
+			<string>mkntfs</string>
+			<key>FSMountArguments</key>
+			<string></string>
+			<key>FSMountExecutable</key>
+			<string>mount_tuxera_NTFS</string>
+			<key>FSName</key>
+			<string>Microsoft NTFS</string>
+			<key>FSRepairArguments</key>
+			<string></string>
+			<key>FSRepairExecutable</key>
+			<string>ntfs-3g.util</string>
+			<key>FSSubType</key>
+			<integer>0</integer>
+			<key>FSVerificationArguments</key>
+			<string></string>
+			<key>FSVerificationExecutable</key>
+			<string>ntfs-3g.util</string>
+		</dict>
+	</dict>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2020 Hao Guan. All rights reserved.</string>
-	<key>NSPrincipalClass</key>
-	<string></string>
 </dict>
 </plist>

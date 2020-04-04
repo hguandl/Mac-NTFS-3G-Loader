@@ -6,9 +6,33 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		83F501322438B754006C3CB8 /* mkntfs in Resources */ = {isa = PBXBuildFile; fileRef = 83F5012F2438B754006C3CB8 /* mkntfs */; };
+		83F501332438B754006C3CB8 /* ntfs-3g.util in Resources */ = {isa = PBXBuildFile; fileRef = 83F501302438B754006C3CB8 /* ntfs-3g.util */; };
+		83F501342438B754006C3CB8 /* mount_tuxera_NTFS in Resources */ = {isa = PBXBuildFile; fileRef = 83F501312438B754006C3CB8 /* mount_tuxera_NTFS */; };
+		83F501392438B9B3006C3CB8 /* version.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 83F501352438B8DE006C3CB8 /* version.plist */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		83F501362438B920006C3CB8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents;
+			dstSubfolderSpec = 1;
+			files = (
+				83F501392438B9B3006C3CB8 /* version.plist in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		83F501252438B71E006C3CB8 /* fsbundle.fs */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fsbundle.fs; sourceTree = BUILT_PRODUCTS_DIR; };
+		83F501252438B71E006C3CB8 /* tuxera_NTFS.fs */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tuxera_NTFS.fs; sourceTree = BUILT_PRODUCTS_DIR; };
 		83F501282438B71E006C3CB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83F5012F2438B754006C3CB8 /* mkntfs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = mkntfs; sourceTree = "<group>"; };
+		83F501302438B754006C3CB8 /* ntfs-3g.util */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "ntfs-3g.util"; sourceTree = "<group>"; };
+		83F501312438B754006C3CB8 /* mount_tuxera_NTFS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = mount_tuxera_NTFS; sourceTree = "<group>"; };
+		83F501352438B8DE006C3CB8 /* version.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = version.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -25,6 +49,7 @@
 		83F5011C2438B71E006C3CB8 = {
 			isa = PBXGroup;
 			children = (
+				83F5012E2438B72A006C3CB8 /* Resources */,
 				83F501272438B71E006C3CB8 /* fsbundle */,
 				83F501262438B71E006C3CB8 /* Products */,
 			);
@@ -33,7 +58,7 @@
 		83F501262438B71E006C3CB8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				83F501252438B71E006C3CB8 /* fsbundle.fs */,
+				83F501252438B71E006C3CB8 /* tuxera_NTFS.fs */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -41,9 +66,20 @@
 		83F501272438B71E006C3CB8 /* fsbundle */ = {
 			isa = PBXGroup;
 			children = (
+				83F501352438B8DE006C3CB8 /* version.plist */,
 				83F501282438B71E006C3CB8 /* Info.plist */,
 			);
 			path = fsbundle;
+			sourceTree = "<group>";
+		};
+		83F5012E2438B72A006C3CB8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				83F5012F2438B754006C3CB8 /* mkntfs */,
+				83F501312438B754006C3CB8 /* mount_tuxera_NTFS */,
+				83F501302438B754006C3CB8 /* ntfs-3g.util */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,6 +91,7 @@
 			buildPhases = (
 				83F501212438B71E006C3CB8 /* Sources */,
 				83F501222438B71E006C3CB8 /* Frameworks */,
+				83F501362438B920006C3CB8 /* CopyFiles */,
 				83F501232438B71E006C3CB8 /* Resources */,
 			);
 			buildRules = (
@@ -63,7 +100,7 @@
 			);
 			name = fsbundle;
 			productName = fsbundle;
-			productReference = 83F501252438B71E006C3CB8 /* fsbundle.fs */;
+			productReference = 83F501252438B71E006C3CB8 /* tuxera_NTFS.fs */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -103,6 +140,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83F501342438B754006C3CB8 /* mount_tuxera_NTFS in Resources */,
+				83F501332438B754006C3CB8 /* ntfs-3g.util in Resources */,
+				83F501322438B754006C3CB8 /* mkntfs in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,13 +272,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 29V29Y67P2;
 				INFOPLIST_FILE = fsbundle/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Filesystems";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hguandl.filesystems.ntfs.fsbundle;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				PRODUCT_NAME = tuxera_NTFS;
 				WRAPPER_EXTENSION = fs;
 			};
 			name = Debug;
@@ -247,13 +286,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 29V29Y67P2;
 				INFOPLIST_FILE = fsbundle/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Filesystems";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hguandl.filesystems.ntfs.fsbundle;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				PRODUCT_NAME = tuxera_NTFS;
 				WRAPPER_EXTENSION = fs;
 			};
 			name = Release;
