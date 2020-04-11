@@ -6,8 +6,9 @@ probe() {
     if [ $? -eq 0 ]; then
         /usr/local/opt/ntfs-3g/sbin/ntfslabel /dev/$1 | tr -d '\n'
         exit 255
+    else
+        exit 254
     fi
-    exit 0
 }
 
 while getopts ":pq" opt; do
